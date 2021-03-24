@@ -3,13 +3,18 @@
   padding: 0px;
   box-sizing: border-box;
 }
+
 body {
-  background-color: #FEE3AD;
+  font-family: 'Poppins', sans-serif;
+}
+nav {
+  background-color: #FFC0AD;
 }
 nav h1 {
   font-size: 10rem;
   text-align: center;
   color: #FF1493;
+  font-family: 'Roboto', sans-serif;
 }
 
 nav ul {
@@ -32,18 +37,19 @@ nav ul li a:hover {
 .bottom-left {
   width: 0;
   height: 0;
-  border-bottom: 100px solid #A35BEB;
+  border-bottom: 100px solid #FF1493;
   border-right: 100px solid transparent;
-  position: absolute;
+  position: fixed;
   bottom: 0px;
+  left: 0px;
 }
 
 .bottom-right {
   width: 0;
   height: 0;
-  border-bottom: 100px solid #A35BEB;
+  border-bottom: 100px solid #FF1493;
   border-left: 100px solid transparent;
-  position: absolute;
+  position: fixed;
   bottom: 0px;
   right: 0px;
 }
@@ -51,10 +57,105 @@ nav ul li a:hover {
 .hero {
   position: absolute;
   left: 50%;
-  right: 50%;
-  transform: translate(-50%,50%);
+  top: 50%;
+  transform: translate(-50%,-50%);
   width: 20%;
 }
 .hero img {
   width: 100%;
+}
+.landing-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  justify-content: space-around;
+}
+/* ----ICE CREAM CONE ------ */
+.icecream-container {
+  position: relative;
+  margin: 50px;
+  display: inline-block;
+}
+.icecream {
+  background-color: #7B3F00;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  position: relative;
+}
+
+.icecream::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 0px;
+  height: 30px;
+  background: #7B3F00;
+  width: 100px;
+  border-radius: 100%;
+}
+.icecream2 {
+  background-color: #98ff98 ;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  position: relative;
+}
+
+.icecream2::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 0px;
+  height: 30px;
+  background: #98ff98 ;
+  width: 100px;
+  border-radius: 100%;
+}
+
+
+.cone {
+  margin-top: -20px;
+  height: 0px;
+  width: 0px;
+  border-right: 45px solid transparent;
+  border-left: 45px solid transparent;
+  border-top: 140px solid tan;
+  z-index: 1;
+}
+
+/* ---- pizza ---- */
+
+.burger-container {
+  width: 200px;
+  height: 200px;
+}
+.bun {
+	 width: 200px;
+	 height: 60px;
+	 background-color: #df7b31;
+	 border-radius: 100px 100px 0 0;
+}
+.meat {
+  top: 135px;
+  width: 200px;
+  height: 30px;
+  background: #9D4845;
+  border-radius: 100px;
+}
+.bun2 {
+	 width: 200px;
+	 height: 30px;
+	 background-color: #df7b31;
+	 border-radius: 0px 0px 100px 100px;
+}
+
+.egg {
+  width: 70px;
+  height: 70px;
+  background: #ffefae;
+  border-radius: 80% 15% 55% 50% / 55% 15% 80% 50%;
+  transform: rotate(-45deg);
+  border: 2px solid #272727;
+  margin-top: 30px;
 }
